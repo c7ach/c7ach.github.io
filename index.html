@@ -1,0 +1,1357 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印象足拍摄影班花 - 官方视频门户,用镜头记录每一次绽放</title>
+<meta name="description" content="印象足拍摄影班花官方网站,专注人像摄影教学与美学表达的原创视频平台,汇聚专业创作者,持续输出高清教程、深度测评与真实影像故事。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2b3a'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%23e8b04b' stroke-width='3'/%3E%3Ccircle cx='32' cy='30' r='5' fill='%23e8b04b'/%3E%3Crect x='16' y='46' width='32' height='4' rx='2' fill='%23e8b04b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --yb-ink:#1b2b3a;
+  --yb-ink-2:#2c4256;
+  --yb-amber:#e8b04b;
+  --yb-amber-deep:#c98f2c;
+  --yb-paper:#f7f4ee;
+  --yb-paper-2:#efe9df;
+  --yb-line:#d9d0c2;
+  --yb-text:#2b333c;
+  --yb-muted:#6c7784;
+  --yb-white:#ffffff;
+  --yb-shadow:0 10px 30px rgba(27,43,58,.10);
+  --yb-radius:14px;
+  --yb-sticky:118px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  color:var(--yb-text);
+  background:var(--yb-paper);
+  line-height:1.75;
+  font-size:16px;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+.yb-hide{display:none;}
+.yb-wrap{width:min(1180px,92vw);margin:0 auto;}
+.yb-skip{
+  position:absolute;left:-9999px;top:0;background:var(--yb-ink);color:#fff;padding:10px 18px;z-index:999;
+}
+.yb-skip:focus{left:10px;top:10px;}
+
+/* ============ 吸顶区: 公告条 + 页头 ============ */
+.yb-sticky-shell{
+  position:sticky;top:0;z-index:120;
+  background:var(--yb-white);
+  box-shadow:0 6px 22px rgba(27,43,58,.08);
+}
+.yb-announce{
+  background:linear-gradient(90deg,var(--yb-ink) 0%,var(--yb-ink-2) 70%,#3a5670 100%);
+  color:#f4efe6;
+  font-size:13.5px;
+  padding:8px 0;
+}
+.yb-announce .yb-wrap{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.yb-announce-tag{
+  background:var(--yb-amber);color:var(--yb-ink);
+  font-weight:700;font-size:12px;letter-spacing:.06em;
+  padding:2px 9px;border-radius:999px;white-space:nowrap;
+}
+.yb-announce-list{display:flex;gap:22px;flex-wrap:wrap;margin:0;padding:0;list-style:none;}
+.yb-announce-list li{display:flex;align-items:center;gap:6px;opacity:.95;}
+.yb-announce-list li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--yb-amber);flex:0 0 auto;}
+.yb-announce-more{margin-left:auto;color:var(--yb-amber);font-weight:600;white-space:nowrap;}
+
+.yb-header{background:var(--yb-white);border-bottom:1px solid var(--yb-line);}
+.yb-header-inner{
+  display:flex;align-items:center;gap:26px;padding:14px 0;
+}
+.yb-brand{display:flex;align-items:center;gap:12px;flex:0 0 auto;}
+.yb-brand-mark{
+  width:46px;height:46px;border-radius:12px;
+  background:linear-gradient(140deg,var(--yb-ink) 0%,#3d5b74 100%);
+  display:grid;place-items:center;color:var(--yb-amber);
+}
+.yb-brand-mark svg{width:26px;height:26px;}
+.yb-brand-text strong{display:block;font-size:19px;letter-spacing:.02em;color:var(--yb-ink);line-height:1.3;}
+.yb-brand-text span{display:block;font-size:11.5px;color:var(--yb-muted);letter-spacing:.16em;}
+
+.yb-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap;}
+.yb-nav a{
+  padding:8px 12px;border-radius:9px;font-size:14.5px;color:var(--yb-ink-2);font-weight:500;
+  transition:background .18s,color .18s;
+}
+.yb-nav a:hover,.yb-nav a:focus-visible{background:var(--yb-paper-2);color:var(--yb-ink);}
+
+.yb-header-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.yb-search{
+  display:flex;align-items:center;background:var(--yb-paper);
+  border:1px solid var(--yb-line);border-radius:999px;padding:5px 6px 5px 14px;
+}
+.yb-search input{
+  border:0;background:transparent;outline:none;font-size:14px;width:150px;color:var(--yb-text);
+}
+.yb-search button{
+  border:0;background:var(--yb-ink);color:var(--yb-amber);
+  width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+}
+.yb-search button svg{width:15px;height:15px;}
+.yb-btn{
+  border:1px solid transparent;border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600;
+  transition:transform .16s,box-shadow .16s,background .16s;
+}
+.yb-btn:active{transform:translateY(1px);}
+.yb-btn-solid{background:var(--yb-ink);color:#fff;}
+.yb-btn-solid:hover{background:var(--yb-ink-2);box-shadow:0 6px 16px rgba(27,43,58,.2);}
+.yb-btn-amber{background:var(--yb-amber);color:var(--yb-ink);}
+.yb-btn-amber:hover{background:#f0bd66;}
+.yb-btn-ghost{background:transparent;border-color:var(--yb-line);color:var(--yb-ink);}
+.yb-btn-ghost:hover{border-color:var(--yb-amber-deep);color:var(--yb-amber-deep);}
+.yb-nav-toggle{
+  display:none;background:transparent;border:1px solid var(--yb-line);border-radius:10px;
+  width:42px;height:42px;place-items:center;
+}
+.yb-nav-toggle svg{width:20px;height:20px;}
+
+.yb-search-feedback{
+  font-size:13px;color:var(--yb-amber-deep);padding:0 0 8px;display:none;
+}
+.yb-search-feedback.yb-show{display:block;}
+
+/* ============ 通用区块 ============ */
+.yb-section{padding:64px 0;scroll-margin-top:var(--yb-sticky);}
+.yb-section-alt{background:var(--yb-white);}
+.yb-section-ink{background:var(--yb-ink);color:#e9eef3;}
+.yb-section-ink .yb-muted{color:#a9bac9;}
+.yb-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:.18em;font-weight:700;color:var(--yb-amber-deep);
+  text-transform:uppercase;margin-bottom:10px;
+}
+.yb-eyebrow::before{content:"";width:22px;height:2px;background:var(--yb-amber);}
+.yb-section-ink .yb-eyebrow{color:var(--yb-amber);}
+.yb-h2{font-size:clamp(24px,3vw,34px);line-height:1.3;margin:0 0 12px;color:var(--yb-ink);letter-spacing:.01em;}
+.yb-section-ink .yb-h2{color:#fff;}
+.yb-h3{font-size:18px;margin:0 0 8px;color:var(--yb-ink);line-height:1.45;}
+.yb-section-ink .yb-h3{color:#fff;}
+.yb-lead{color:var(--yb-muted);max-width:720px;margin:0 0 30px;font-size:15.5px;}
+.yb-muted{color:var(--yb-muted);}
+.yb-grid{display:grid;gap:24px;}
+.yb-grid > *{min-width:0;}
+
+/* ============ 首屏 5:5 大幅图文 ============ */
+.yb-hero{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(232,176,75,.16),transparent 42%),
+    linear-gradient(160deg,#20374a 0%,#16242f 62%,#101a22 100%);
+  color:#eef3f7;padding:58px 0 66px;position:relative;overflow:hidden;
+}
+.yb-hero::after{
+  content:"";position:absolute;right:-160px;bottom:-190px;width:480px;height:480px;
+  border-radius:50%;border:1px solid rgba(232,176,75,.22);pointer-events:none;
+}
+.yb-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1;}
+.yb-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,176,75,.5);
+  color:var(--yb-amber);border-radius:999px;font-size:12.5px;letter-spacing:.14em;
+  padding:5px 14px;margin-bottom:18px;font-weight:600;
+}
+.yb-hero h1{
+  font-size:clamp(38px,5.4vw,64px);line-height:1.12;margin:0 0 18px;
+  letter-spacing:.01em;font-weight:800;
+}
+.yb-hero h1 em{
+  font-style:normal;color:var(--yb-amber);
+  background:linear-gradient(180deg,transparent 64%,rgba(232,176,75,.22) 64%);
+}
+.yb-hero-sub{font-size:16.5px;color:#c3d1dc;max-width:520px;margin:0 0 22px;}
+.yb-hero-intro{
+  font-size:14.5px;color:#a8bac8;border-left:2px solid var(--yb-amber);
+  padding-left:16px;margin:0 0 26px;line-height:1.85;
+}
+.yb-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px;}
+.yb-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;}
+.yb-hero-stats b{display:block;font-size:26px;color:#fff;line-height:1.2;}
+.yb-hero-stats span{font-size:12.5px;color:#9db0bf;letter-spacing:.05em;}
+.yb-hero-visual{position:relative;}
+.yb-hero-visual img{
+  width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:20px;
+  box-shadow:0 26px 60px rgba(0,0,0,.45);
+  border:1px solid rgba(255,255,255,.12);
+}
+.yb-hero-float{
+  position:absolute;left:-18px;bottom:22px;background:rgba(255,255,255,.96);
+  color:var(--yb-ink);border-radius:14px;padding:12px 16px;box-shadow:var(--yb-shadow);
+  font-size:13px;min-width:180px;
+}
+.yb-hero-float strong{display:block;font-size:15px;}
+.yb-hero-float span{color:var(--yb-muted);font-size:12px;}
+
+/* ============ 视频区: 一幅重点大图 + 文字列表 ============ */
+.yb-focus{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:start;}
+.yb-focus-card{background:var(--yb-paper);border-radius:var(--yb-radius);overflow:hidden;border:1px solid var(--yb-line);transition:transform .22s,box-shadow .22s;}
+.yb-focus-card:hover{transform:translateY(-4px);box-shadow:var(--yb-shadow);}
+.yb-focus-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.yb-focus-body{padding:20px 22px 24px;}
+.yb-tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px;}
+.yb-tag{
+  font-size:12px;background:var(--yb-white);color:var(--yb-ink-2);
+  border:1px solid var(--yb-line);border-radius:999px;padding:2px 10px;
+}
+.yb-section-ink .yb-tag{background:transparent;color:#c8d6e1;border-color:#3d5468;}
+.yb-focus-body h3{font-size:20px;margin:0 0 8px;color:var(--yb-ink);}
+.yb-focus-body p{font-size:14.5px;color:var(--yb-muted);margin:0 0 14px;}
+
+.yb-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.yb-list-item{
+  background:var(--yb-white);border:1px solid var(--yb-line);border-radius:12px;
+  padding:16px 18px;transition:border-color .18s,transform .18s;
+}
+.yb-list-item:hover{border-color:var(--yb-amber);transform:translateX(3px);}
+.yb-list-item h3{font-size:16px;margin:0 0 5px;}
+.yb-list-item p{font-size:13.5px;color:var(--yb-muted);margin:0 0 10px;}
+.yb-meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--yb-muted);}
+.yb-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.yb-mini-btn{
+  border:1px solid var(--yb-line);background:var(--yb-white);border-radius:999px;
+  font-size:12.5px;padding:4px 12px;color:var(--yb-ink-2);display:inline-flex;align-items:center;gap:5px;
+  transition:background .16s,border-color .16s,color .16s;
+}
+.yb-mini-btn:hover{border-color:var(--yb-amber-deep);color:var(--yb-amber-deep);}
+.yb-mini-btn.yb-active-like{background:#fdeeee;border-color:#e2a4a4;color:#b34141;}
+.yb-mini-btn.yb-active-fav{background:#fdf5e6;border-color:var(--yb-amber);color:var(--yb-amber-deep);}
+
+/* ============ 深度解析长文 ============ */
+.yb-article{max-width:860px;}
+.yb-article h3{font-size:19px;margin:30px 0 10px;color:var(--yb-ink);position:relative;padding-left:14px;}
+.yb-article h3::before{
+  content:"";position:absolute;left:0;top:8px;width:5px;height:18px;border-radius:3px;
+  background:var(--yb-amber);
+}
+.yb-article p{margin:0 0 14px;font-size:15.5px;color:#3a4552;}
+.yb-article .yb-quote{
+  border-left:3px solid var(--yb-amber);background:var(--yb-paper-2);
+  padding:14px 18px;border-radius:0 10px 10px 0;color:var(--yb-ink-2);font-size:14.5px;margin:18px 0;
+}
+
+/* ============ 专题 ============ */
+.yb-topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+.yb-topic{
+  background:var(--yb-white);border-radius:var(--yb-radius);border:1px solid var(--yb-line);
+  padding:22px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .2s,transform .2s;
+}
+.yb-topic:hover{box-shadow:var(--yb-shadow);transform:translateY(-3px);}
+.yb-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.yb-topic-head h3{font-size:18px;margin:0;color:var(--yb-ink);}
+.yb-status{
+  font-size:11.5px;border-radius:999px;padding:2px 9px;white-space:nowrap;font-weight:600;
+}
+.yb-status-live{background:#e7f3e9;color:#2f6b3c;}
+.yb-status-soon{background:#fdf3e0;color:var(--yb-amber-deep);}
+.yb-topic > p{font-size:14px;color:var(--yb-muted);margin:0;}
+.yb-topic-items{list-style:none;margin:4px 0 0;padding:0;border-top:1px dashed var(--yb-line);}
+.yb-topic-items li{
+  font-size:13.5px;padding:8px 0;border-bottom:1px dashed var(--yb-line);
+  display:flex;gap:10px;color:var(--yb-ink-2);
+}
+.yb-topic-items li:last-child{border-bottom:0;}
+.yb-topic-items li span{color:var(--yb-amber-deep);font-weight:700;flex:0 0 auto;}
+
+/* ============ 时间线故事 ============ */
+.yb-timeline{position:relative;margin:0;padding:0 0 0 26px;list-style:none;}
+.yb-timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--yb-amber),#cfd8e0);}
+.yb-timeline li{position:relative;padding:0 0 26px;}
+.yb-timeline li::before{
+  content:"";position:absolute;left:-26px;top:7px;width:14px;height:14px;border-radius:50%;
+  background:var(--yb-white);border:3px solid var(--yb-amber);
+}
+.yb-timeline time{font-size:12.5px;color:var(--yb-amber-deep);font-weight:700;letter-spacing:.06em;}
+.yb-timeline h3{font-size:17px;margin:4px 0 6px;color:var(--yb-ink);}
+.yb-timeline p{font-size:14px;color:var(--yb-muted);margin:0;}
+
+/* ============ 作者矩阵: 双列简介 ============ */
+.yb-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;}
+.yb-author{
+  background:var(--yb-white);border:1px solid var(--yb-line);border-radius:var(--yb-radius);
+  padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+  transition:box-shadow .2s;
+}
+.yb-author:hover{box-shadow:var(--yb-shadow);}
+.yb-avatar{
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:20px;flex:0 0 auto;font-style:normal;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.5);
+}
+.yb-author h3{font-size:16.5px;margin:0 0 2px;color:var(--yb-ink);}
+.yb-author .yb-role{font-size:12.5px;color:var(--yb-amber-deep);font-weight:600;margin-bottom:6px;}
+.yb-author p{font-size:13.5px;color:var(--yb-muted);margin:0 0 8px;}
+.yb-author-stats{display:flex;gap:14px;font-size:12.5px;color:var(--yb-muted);flex-wrap:wrap;}
+.yb-author-stats b{color:var(--yb-ink);}
+.yb-author .yb-mini-btn{margin-right:6px;margin-top:8px;}
+
+/* ============ 评论: 双列短评 ============ */
+.yb-comments{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;}
+.yb-comment{
+  background:var(--yb-paper);border:1px solid var(--yb-line);border-radius:12px;padding:18px 20px;
+  position:relative;
+}
+.yb-comment::before{
+  content:"“";position:absolute;top:2px;right:16px;font-size:46px;line-height:1;
+  color:rgba(201,143,44,.18);font-family:Georgia,serif;
+}
+.yb-comment p{font-size:14px;margin:0 0 10px;color:#37424e;}
+.yb-comment footer{font-size:12.5px;color:var(--yb-muted);display:flex;gap:10px;align-items:center;}
+.yb-comment footer b{color:var(--yb-ink);}
+.yb-stars{color:var(--yb-amber-deep);letter-spacing:2px;font-size:13px;}
+
+/* ============ 榜单 ============ */
+.yb-charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.yb-chart{background:var(--yb-white);border:1px solid var(--yb-line);border-radius:var(--yb-radius);padding:20px;}
+.yb-chart h3{font-size:17px;margin:0 0 12px;color:var(--yb-ink);display:flex;align-items:center;gap:8px;}
+.yb-chart h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--yb-amber);transform:rotate(45deg);}
+.yb-chart ol{list-style:none;margin:0;padding:0;counter-reset:ybrank;}
+.yb-chart li{
+  counter-increment:ybrank;display:flex;gap:12px;align-items:baseline;
+  padding:9px 0;border-bottom:1px dashed var(--yb-line);font-size:14px;
+}
+.yb-chart li:last-child{border-bottom:0;}
+.yb-chart li::before{
+  content:counter(ybrank);font-size:12px;font-weight:800;color:var(--yb-amber-deep);
+  background:var(--yb-paper-2);border-radius:6px;width:22px;text-align:center;flex:0 0 auto;line-height:20px;
+}
+.yb-chart li b{color:var(--yb-ink-2);font-weight:600;}
+.yb-chart li span{margin-left:auto;color:var(--yb-muted);font-size:12.5px;}
+
+/* ============ 企业动态 ============ */
+.yb-news{display:grid;gap:14px;max-width:860px;}
+.yb-news article{
+  display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start;
+  background:var(--yb-white);border:1px solid var(--yb-line);border-radius:12px;padding:16px 18px;
+}
+.yb-news time{font-size:12.5px;color:var(--yb-amber-deep);font-weight:700;}
+.yb-news h3{font-size:15.5px;margin:0 0 4px;}
+.yb-news p{font-size:13.5px;color:var(--yb-muted);margin:0;}
+
+/* ============ 合作墙 ============ */
+.yb-partners{display:flex;flex-wrap:wrap;gap:14px;}
+.yb-partner{
+  border:1px solid var(--yb-line);background:var(--yb-white);border-radius:10px;
+  padding:12px 20px;font-size:14px;color:var(--yb-ink-2);font-weight:600;
+  transition:border-color .18s,color .18s;
+}
+.yb-partner:hover{border-color:var(--yb-amber);color:var(--yb-amber-deep);}
+
+/* ============ FAQ ============ */
+.yb-faq{max-width:860px;display:grid;gap:10px;}
+.yb-faq details{
+  background:var(--yb-white);border:1px solid var(--yb-line);border-radius:10px;padding:0 18px;
+}
+.yb-faq details[open]{border-color:var(--yb-amber);}
+.yb-faq summary{
+  cursor:pointer;font-weight:600;font-size:15px;padding:14px 0;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;color:var(--yb-ink);
+}
+.yb-faq summary::-webkit-details-marker{display:none;}
+.yb-faq summary::after{content:"+";color:var(--yb-amber-deep);font-weight:700;font-size:18px;line-height:1;}
+.yb-faq details[open] summary::after{content:"−";}
+.yb-faq p{font-size:14px;color:var(--yb-muted);margin:0 0 16px;}
+
+/* ============ 投稿 / 联系 ============ */
+.yb-cta{
+  background:linear-gradient(140deg,#1e3346,#152430);color:#e9eff4;border-radius:20px;
+  padding:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;
+}
+.yb-cta h2{font-size:clamp(22px,2.6vw,30px);margin:0 0 10px;color:#fff;}
+.yb-cta p{color:#b2c3d1;margin:0 0 20px;font-size:14.5px;}
+.yb-cta-info{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px;font-size:14px;color:#c6d5e1;}
+.yb-cta-info li span{color:var(--yb-amber);font-weight:600;margin-right:8px;}
+.yb-cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.yb-cta-box{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;
+}
+.yb-cta-box h3{font-size:16px;color:#fff;margin:0 0 8px;}
+.yb-cta-box p{font-size:13px;margin:0 0 14px;}
+.yb-cta-box input{
+  width:100%;border-radius:9px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);
+  color:#fff;padding:10px 12px;font-size:14px;outline:none;margin-bottom:10px;
+}
+.yb-cta-box input::placeholder{color:#93a7b6;}
+
+/* ============ 页脚 ============ */
+.yb-footer{background:#101c26;color:#9fb1bf;padding:52px 0 26px;font-size:14px;}
+.yb-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.yb-footer h3{font-size:14.5px;color:#fff;margin:0 0 12px;letter-spacing:.04em;}
+.yb-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+.yb-footer a:hover{color:var(--yb-amber);}
+.yb-footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.yb-footer-brand .yb-brand-mark{background:linear-gradient(140deg,#28425a,#16303f);}
+.yb-footer-brand strong{color:#fff;font-size:17px;letter-spacing:.02em;}
+.yb-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7d93a3;
+}
+
+/* ============ 弹窗 / Toast / 回顶 ============ */
+.yb-modal{
+  position:fixed;inset:0;background:rgba(15,26,35,.62);display:none;place-items:center;z-index:300;padding:20px;
+}
+.yb-modal.yb-open{display:grid;}
+.yb-modal-panel{
+  background:var(--yb-white);border-radius:16px;max-width:480px;width:100%;padding:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:82vh;overflow:auto;
+}
+.yb-modal-panel h3{margin:0 0 10px;color:var(--yb-ink);font-size:19px;}
+.yb-modal-panel p{font-size:14px;color:var(--yb-muted);margin:0 0 14px;}
+.yb-modal-panel textarea,.yb-modal-panel input{
+  width:100%;border:1px solid var(--yb-line);border-radius:9px;padding:10px 12px;font-size:14px;
+  font-family:inherit;outline:none;margin-bottom:12px;
+}
+.yb-modal-panel textarea{min-height:96px;resize:vertical;}
+.yb-modal-actions{display:flex;gap:10px;justify-content:flex-end;}
+.yb-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--yb-ink);color:#fff;padding:11px 22px;border-radius:999px;font-size:14px;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:400;
+  box-shadow:0 12px 30px rgba(0,0,0,.28);
+}
+.yb-toast.yb-show{opacity:1;transform:translate(-50%,0);}
+.yb-backtop{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--yb-ink);color:var(--yb-amber);border:0;display:grid;place-items:center;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;
+  box-shadow:0 10px 24px rgba(27,43,58,.28);
+}
+.yb-backtop.yb-show{opacity:1;pointer-events:auto;}
+.yb-backtop:hover{transform:translateY(-3px);}
+.yb-backtop svg{width:18px;height:18px;}
+
+/* ============ 响应式 ============ */
+@media (max-width:1000px){
+  .yb-hero-inner{grid-template-columns:1fr;gap:34px;}
+  .yb-hero-visual img{aspect-ratio:16/10;}
+  .yb-focus{grid-template-columns:1fr;}
+  .yb-footer-grid{grid-template-columns:1fr 1fr;}
+  .yb-cta{grid-template-columns:1fr;padding:28px;}
+}
+@media (max-width:860px){
+  .yb-nav-toggle{display:grid;}
+  .yb-nav{
+    display:none;flex-basis:100%;flex-direction:column;gap:2px;
+    padding:10px 0 4px;border-top:1px solid var(--yb-line);margin-top:6px;
+  }
+  .yb-nav.yb-open{display:flex;}
+  .yb-header-inner{flex-wrap:wrap;gap:14px;}
+  .yb-header-tools{order:3;flex:1 1 100%;justify-content:space-between;}
+  .yb-search{flex:1 1 auto;}
+  .yb-search input{width:100%;}
+  .yb-announce-list{gap:10px 18px;}
+  .yb-announce-more{margin-left:0;}
+}
+@media (max-width:640px){
+  :root{--yb-sticky:150px;}
+  .yb-section{padding:44px 0;}
+  .yb-hero{padding:40px 0 48px;}
+  .yb-hero-stats{grid-template-columns:1fr;gap:12px;text-align:left;}
+  .yb-hero-float{left:8px;bottom:8px;}
+  .yb-authors{grid-template-columns:1fr;}
+  .yb-news article{grid-template-columns:1fr;gap:6px;}
+  .yb-footer-grid{grid-template-columns:1fr;}
+  .yb-modal-panel{padding:20px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="yb-skip" href="#yb-main">跳到主要内容</a>
+
+<div class="yb-sticky-shell">
+  <div class="yb-announce" role="region" aria-label="站内更新公告">
+    <div class="yb-wrap">
+      <span class="yb-announce-tag">官方发布</span>
+      <ul class="yb-announce-list">
+        <li>11月20日 上线「印象足拍」第四季人像光影课程 12 讲</li>
+        <li>11月18日 班花创作者扶持计划开放报名,首批 40 位名额</li>
+        <li>11月15日 客户端新增 4K 原片下载与封面模板库</li>
+      </ul>
+      <a class="yb-announce-more" href="#yb-news">查看全部动态 →</a>
+    </div>
+  </div>
+
+  <header class="yb-header">
+    <div class="yb-wrap yb-header-inner">
+      <a class="yb-brand" href="#yb-top" aria-label="印象足拍摄影班花 官方首页">
+        <span class="yb-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"></circle>
+            <path d="M3 8.5h3.2L8 6h8l1.8 2.5H21"></path>
+            <path d="M3 8.5v9.5h18V8.5"></path>
+          </svg>
+        </span>
+        <span class="yb-brand-text">
+          <strong>印象足拍摄影班花</strong>
+          <span>YINXIANG · OFFICIAL</span>
+        </span>
+      </a>
+
+      <nav class="yb-nav" id="yb-nav" aria-label="主导航">
+        <a href="#yb-focus">精选影像</a>
+        <a href="#yb-insight">品牌解析</a>
+        <a href="#yb-topics">专题企划</a>
+        <a href="#yb-story">品牌故事</a>
+        <a href="#yb-authors">创作者</a>
+        <a href="#yb-voices">口碑评价</a>
+        <a href="#yb-news">企业动态</a>
+        <a href="#yb-faq">帮助中心</a>
+      </nav>
+
+      <div class="yb-header-tools">
+        <form class="yb-search" id="yb-search-form" role="search" onsubmit="return false;">
+          <label for="yb-search-input" class="yb-hide">搜索视频与创作者</label>
+          <input id="yb-search-input" type="search" placeholder="搜索课程 / 创作者 / 专题" autocomplete="off">
+          <button type="submit" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M20 20l-3.6-3.6"></path>
+            </svg>
+          </button>
+        </form>
+        <a class="yb-btn yb-btn-amber" href="#yb-cta">投稿入驻</a>
+        <button class="yb-nav-toggle" id="yb-nav-toggle" aria-label="展开导航菜单" aria-expanded="false" aria-controls="yb-nav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="yb-wrap">
+      <p class="yb-search-feedback" id="yb-search-feedback" role="status"></p>
+    </div>
+  </header>
+</div>
+
+<main id="yb-main">
+
+  <!-- S2 品牌首屏 -->
+  <section class="yb-hero" id="yb-top">
+    <div class="yb-wrap yb-hero-inner">
+      <div>
+        <span class="yb-hero-badge">官方网站 · 官方视频门户</span>
+        <h1>印象足拍摄影班花</h1>
+        <p class="yb-hero-sub">用一支支真实的影像,把光影里那份属于「班花」的自信,交还给每一个站在镜头前的人。</p>
+        <p class="yb-hero-intro">
+          印象足拍摄影班花是专注人像摄影教学的原创视频品牌,以官网形态持续运营。企业自 2016 年起深耕人像光影与美学表达这一垂直领域,累计上线高清精品课程与创作者影像超过 2300 支,为摄影爱好者、学生创作者与线下影棚搭建值得信赖的内容生态。
+        </p>
+        <div class="yb-hero-actions">
+          <a class="yb-btn yb-btn-amber" href="#yb-focus">观看精选内容</a>
+          <a class="yb-btn yb-btn-ghost" href="#yb-authors" style="color:#e9eff4;border-color:rgba(255,255,255,.32);">认识创作者</a>
+          <a class="yb-btn yb-btn-ghost" href="#yb-cta" style="color:#e9eff4;border-color:rgba(255,255,255,.32);">报名扶持计划</a>
+        </div>
+        <div class="yb-hero-stats">
+          <div><b>2300+</b><span>原创高清视频</span></div>
+          <div><b>186万</b><span>社区注册用户</span></div>
+          <div><b>96.4%</b><span>课程完播口碑</span></div>
+        </div>
+      </div>
+      <div class="yb-hero-visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 560'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a4358'/%3E%3Cstop offset='1' stop-color='%23132029'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='.7' cy='.3' r='.6'%3E%3Cstop offset='0' stop-color='%23e8b04b' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%23e8b04b' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='640' height='560' fill='url(%23bg)'/%3E%3Crect width='640' height='560' fill='url(%23glow)'/%3E%3Ccircle cx='420' cy='205' r='96' fill='%23f0c07a' opacity='.22'/%3E%3Ccircle cx='420' cy='205' r='62' fill='none' stroke='%23e8b04b' stroke-width='3'/%3E%3Ccircle cx='420' cy='205' r='26' fill='%23e8b04b' opacity='.85'/%3E%3Cpath d='M120 470 C 220 350, 330 360, 470 470' fill='none' stroke='%23e8b04b' stroke-width='2' opacity='.5'/%3E%3Crect x='96' y='96' width='150' height='9' rx='4.5' fill='%23e8b04b' opacity='.9'/%3E%3Crect x='96' y='120' width='96' height='6' rx='3' fill='%23ffffff' opacity='.35'/%3E%3Crect x='96' y='140' width='122' height='6' rx='3' fill='%23ffffff' opacity='.2'/%3E%3Cpath d='M470 330 L 590 330 L 590 450 L 470 450 Z' fill='none' stroke='%23ffffff' stroke-opacity='.2' stroke-width='2'/%3E%3Ccircle cx='500' cy='365' r='14' fill='%23ffffff' opacity='.18'/%3E%3Crect x='470' y='400' width='120' height='6' rx='3' fill='%23ffffff' opacity='.16'/%3E%3C/svg%3E" alt="印象足拍摄影班花官方首屏主视觉:暖金色环形光圈与深色影棚背景" width="640" height="560">
+        <div class="yb-hero-float">
+          <strong>本周首映</strong>
+          <span>《班花的光:窗边自然光实战》</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 主内容入口：焦点 + 文字列表 -->
+  <section class="yb-section" id="yb-focus">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Focus 精选</span>
+      <h2 class="yb-h2">焦点影像:本周值得完整看完的四支内容</h2>
+      <p class="yb-lead">印象足拍摄影班花官网每周精选重点内容,兼顾教程干货与真实故事。以下条目标注了创作者、热度与可操作的学习路径,便于社区用户按需收藏。</p>
+
+      <div class="yb-focus">
+        <article class="yb-focus-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f6e7c9'/%3E%3Cstop offset='1' stop-color='%23e0b777'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f1)'/%3E%3Crect x='60' y='46' width='240' height='268' rx='10' fill='%23ffffff' opacity='.62'/%3E%3Ccircle cx='180' cy='150' r='46' fill='%23c98448' opacity='.7'/%3E%3Cpath d='M96 292 L 180 214 L 264 292 Z' fill='%23a86b3c' opacity='.55'/%3E%3Crect x='340' y='70' width='240' height='10' rx='5' fill='%23ffffff' opacity='.85'/%3E%3Crect x='340' y='96' width='180' height='8' rx='4' fill='%23ffffff' opacity='.6'/%3E%3Crect x='340' y='120' width='210' height='8' rx='4' fill='%23ffffff' opacity='.45'/%3E%3Crect x='340' y='170' width='150' height='8' rx='4' fill='%23ffffff' opacity='.45'/%3E%3Crect x='340' y='194' width='196' height='8' rx='4' fill='%23ffffff' opacity='.35'/%3E%3Ccircle cx='368' cy='264' r='24' fill='%23ffffff' opacity='.8'/%3E%3Cpath d='M361 254 L 361 274 L 379 264 Z' fill='%23c98448'/%3E%3C/svg%3E" alt="窗边自然光人像课程封面:白色画框与琥珀色光圈构图" width="640" height="360">
+          <div class="yb-focus-body">
+            <div class="yb-tagrow">
+              <span class="yb-tag">教程干货</span><span class="yb-tag">自然光</span><span class="yb-tag">高清</span>
+            </div>
+            <h3>班花的光:窗边自然光实战 90 分钟全流程</h3>
+            <p>从清晨八点的斜射光到午后漫反射,拆解教室、走廊、宿舍窗台三个真实场景的测光与白平衡决策,附完整原片参数表。</p>
+            <div class="yb-meta">
+              <span>创作者:林野枝</span><span>播放 24.6万</span><span>收藏 3.1万</span>
+            </div>
+            <div class="yb-actions">
+              <button class="yb-mini-btn yb-like-btn" type="button" data-count="4218">♡ 点赞 <b>4218</b></button>
+              <button class="yb-mini-btn yb-fav-btn" type="button">☆ 收藏</button>
+              <button class="yb-mini-btn yb-copy-btn" type="button" data-title="班花的光:窗边自然光实战 90 分钟全流程">复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div>
+          <ul class="yb-list">
+            <li class="yb-list-item">
+              <h3>镜头礼仪:拍同学前先学会的三句话</h3>
+              <p>被拍摄者的安全感比参数更值钱。这支 18 分钟的短视频用三次真实沟通现场,演示如何取得肖像授权与情绪同意。</p>
+              <div class="yb-meta"><span>创作者:苏芷·班花观察</span><span>播放 18.2万</span><span>点赞 9640</span><span>收藏 8210</span></div>
+              <div class="yb-actions">
+                <button class="yb-mini-btn yb-like-btn" type="button" data-count="9640">♡ 点赞 <b>9640</b></button>
+                <button class="yb-mini-btn yb-fav-btn" type="button">☆ 收藏</button>
+              </div>
+            </li>
+            <li class="yb-list-item">
+              <h3>毕业季速写:一支 35mm 定焦拍完整间教室</h3>
+              <p>用一机一镜完成 12 个人像机位的极限练习,包含取景路径示意与后期批量调色 LUT 分享。</p>
+              <div class="yb-meta"><span>创作者:老陈的定焦</span><span>播放 15.7万</span><span>点赞 7120</span><span>收藏 6480</span></div>
+              <div class="yb-actions">
+                <button class="yb-mini-btn yb-like-btn" type="button" data-count="7120">♡ 点赞 <b>7120</b></button>
+                <button class="yb-mini-btn yb-fav-btn" type="button">☆ 收藏</button>
+              </div>
+            </li>
+            <li class="yb-list-item">
+              <h3>深度测评:四支 50mm 人像头的肤色还原差异</h3>
+              <p>同一被摄者、同一光源、同一白平衡,四支镜头逐帧对照。结论不只看锐度,也看发丝边缘与暗部层次。</p>
+              <div class="yb-meta"><span>创作者:阿泽测镜头</span><span>播放 12.9万</span><span>点赞 6035</span><span>收藏 5590</span></div>
+              <div class="yb-actions">
+                <button class="yb-mini-btn yb-like-btn" type="button" data-count="6035">♡ 点赞 <b>6035</b></button>
+                <button class="yb-mini-btn yb-fav-btn" type="button">☆ 收藏</button>
+              </div>
+            </li>
+            <li class="yb-list-item">
+              <h3>幕后十分钟:一场 36 人校服群像的调度复盘</h3>
+              <p>从分组、站位到喊拍,现场录音完整保留,真实还原拍摄现场的混乱与秩序。</p>
+              <div class="yb-meta"><span>创作者:叶栖的白棚</span><span>播放 9.8万</span><span>点赞 4580</span><span>收藏 3970</span></div>
+              <div class="yb-actions">
+                <button class="yb-mini-btn yb-like-btn" type="button" data-count="4580">♡ 点赞 <b>4580</b></button>
+                <button class="yb-mini-btn yb-fav-btn" type="button">☆ 收藏</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="yb-section yb-section-alt" id="yb-insight">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Insight 品牌解析</span>
+      <h2 class="yb-h2">为什么是「印象足拍摄影班花」:一个垂直影像品牌的八年</h2>
+      <p class="yb-lead">这段内容由印象足拍摄影班花官方团队撰写,是我们对品牌、内容与社区关系的完整说明,也是新用户理解这个视频平台的入口。</p>
+      <div class="yb-article">
+        <h3>一个名字的来处:从「足拍」到「班花」</h3>
+        <p>2016 年冬天,团队在南方一所高校的旧教学楼里拍摄第一组人像。那天没有反光板,也没有闪光灯,只有一扇朝西的窗和一位被同学喊作「班花」的女生。按下快门之后,我们突然意识到:所谓「印象足拍」,并不是把人拍成某种标准的美,而是足量地拍、足量地看,直到光影里那个人自己走出来。这个名字后来成了品牌名,也成了我们衡量每一条内容的尺子——它必须从真实的拍摄现场长出来。</p>
+        <p>于是「班花」在品牌里从来不是一个被消费的标签,而是一类被认真对待的拍摄对象。她可能是教室里前排那位总被借笔记的同学,也可能是操场边拿着相机的女生自己。印象足拍摄影班花官网的内容结构,始终围绕这个核心展开:先讲清楚怎么拍,再讨论为什么这样拍,最后留下被拍者的声音。</p>
+
+        <h3>内容生态的三层结构:课程、影像与社区</h3>
+        <p>第一层是课程层。我们的高清教程不追求速成,而是把一次完整拍摄拆成可复用的决策链:测光为什么选点测、白平衡为什么不追绝对准确、构图为什么允许留白到失衡。以「窗边自然光」系列为例,单集时长控制在 12 到 24 分钟,每集只解决一个真问题,配套提供原片参数与练习作业。截至 2026 年 11 月,该系列累计上线 46 集,完播率维持在 62% 以上,这对长视频来说是相当不容易的数字。</p>
+        <p>第二层是影像层。我们鼓励创作者提交完整的、有现场感的作品记录,而不只是九宫格成片。一支好的影像内容应该包含失败的部分:糊掉的十六张、被摄者突然转身、天气突然转阴。这些「不完美」恰恰是新手最需要的参照,因为它们让学习变得可执行。品牌每个月会从投稿中选出 8 到 12 支进入官方精编,统一加注拍摄参数与拍摄地信息,并标注创作者署名。</p>
+        <p>第三层是社区层。印象足拍摄影班花并不把自己定义为播放器,而更愿意做一个持续运营的创作者社区。评论区被允许存在不同意见,测评可以被反驳,教程可以被补充。我们设有内容志愿者机制,由资深用户参与新投稿的初筛,给出具体到镜头焦段与后期步骤的修改建议。这套机制运行四年,累计帮助 1400 余位新人完成第一次正式发布。</p>
+
+        <h3>方法论:关于人像的四个诚实的判断</h3>
+        <p>判断一:光比设备重要。我们做过一组对照实验,同一被摄者分别用旗舰机身配普通镜头、入门机身配优质定焦,在自然光条件下由十位摄影讲师盲评,七位认为后者的观感更自然。这并不否定设备的价值,但足以说明在预算有限时,光的训练优先级更高。</p>
+        <p>判断二:沟通比构图重要。大量拍摄失败的根源不是技术,而是被摄者始终处于防御状态。品牌课程里专门有一节讲「拍摄前三分钟」:如何介绍拍摄用途、如何说明照片会出现在哪里、如何给对方随时叫停的权利。这些内容看起来不像摄影技巧,却直接决定了成片里那双眼睛是否放松。</p>
+        <p>判断三:后期是表达,不是补救。我们不建议把全部希望压在调色上。原片的曝光与色温留出合理余量,后期才有空间做风格化处理。官方给出的建议是:人像原片宁可略欠半档,也不要高光溢出,因为肤色高光一旦失去层次,后期很难重建。</p>
+        <p>判断四:尊重比爆款重要。对于在校学生、未成年人被摄者,品牌要求所有公开内容必须具备明确授权,并允许被摄者在任何时间申请下架。这条规则曾经让我们放弃过几支数据很好的内容,但我们认为这是作为一个持续运营的品牌应当付出的成本。</p>
+        <div class="yb-quote">「我们不做让人焦虑的美学。镜头应该让人更自在地成为自己,而不是更像别人。」——印象足拍摄影班花内容团队内部手册第一条</div>
+        <p>以上四个判断构成了品牌的底层逻辑,也解释了为什么官网上的每个板块都同时存在「教程」与「人」:技术要落到具体的人身上才有意义。八年时间里,我们从一间教室走到覆盖 27 座城市的线下合作影棚网络,但起点始终是那扇朝西的窗。如果你也正在为如何拍好身边的人而困扰,欢迎从精选影像开始,一步一步走进这个内容生态。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题 -->
+  <section class="yb-section" id="yb-topics">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Series 专题企划</span>
+      <h2 class="yb-h2">专题企划:四条正在更新的影像线索</h2>
+      <p class="yb-lead">印象足拍摄影班花的专题不是合集打包,而是有明确更新节奏与创作方向的长期企划,每个专题都开放社区投稿与投票。</p>
+      <div class="yb-topics">
+        <article class="yb-topic">
+          <div class="yb-topic-head">
+            <h3>窗边计划 第四季</h3>
+            <span class="yb-status yb-status-live">更新中</span>
+          </div>
+          <p>只用自然光,在十二种日常空间里完成人像练习,主打可复制的低成本拍摄方案。</p>
+          <ul class="yb-topic-items">
+            <li><span>01</span>教室后排的逆光剪影,如何保住脸部细节</li>
+            <li><span>02</span>走廊荧光灯下的肤色偏绿修正思路</li>
+            <li><span>03</span>宿舍小窗前的半身像与镜面补光</li>
+          </ul>
+        </article>
+        <article class="yb-topic">
+          <div class="yb-topic-head">
+            <h3>班花访谈录</h3>
+            <span class="yb-status yb-status-live">更新中</span>
+          </div>
+          <p>镜头两边的人坐下来聊同一张照片,被摄者第一次讲述自己在快门声里的感受。</p>
+          <ul class="yb-topic-items">
+            <li><span>01</span>「被拍了一百次,我才敢直视镜头」</li>
+            <li><span>02</span>一位理科生的肖像实验与自我辨认</li>
+            <li><span>03</span>拍同学的人,后来怎么样了</li>
+          </ul>
+        </article>
+        <article class="yb-topic">
+          <div class="yb-topic-head">
+            <h3>一支定焦走完校园</h3>
+            <span class="yb-status yb-status-soon">即将上线</span>
+          </div>
+          <p>限定 35mm 或 50mm 单镜头完成整组创作,训练取景的身体记忆。</p>
+          <ul class="yb-topic-items">
+            <li><span>01</span>35mm 的教室:距离感与侵入感的平衡</li>
+            <li><span>02</span>50mm 的操场:让背景成为情绪的留白</li>
+            <li><span>03</span>85mm 的走廊:压缩空间后的秩序感</li>
+          </ul>
+        </article>
+        <article class="yb-topic">
+          <div class="yb-topic-head">
+            <h3>幕后与失败合集</h3>
+            <span class="yb-status yb-status-live">更新中</span>
+          </div>
+          <p>专门收录拍摄事故与翻车现场,让学习过程呈现完整样貌,每期附改进清单。</p>
+          <ul class="yb-topic-items">
+            <li><span>01</span>存储卡满格之后的十五分钟救场</li>
+            <li><span>02</span>阴天外拍如何临时改脚本</li>
+            <li><span>03</span>后期导出色彩空间踩过的三个坑</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事时间线 -->
+  <section class="yb-section yb-section-ink" id="yb-story">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Story 品牌故事</span>
+      <h2 class="yb-h2">品牌故事:从一间教室到二十七座城市</h2>
+      <p class="yb-lead" style="color:#a9bac9;">印象足拍摄影班花的企业成长并非直线。以下是官方记录的关键节点,也是理解我们内容取向的重要背景。</p>
+      <ol class="yb-timeline">
+        <li>
+          <time>2016 · 冬</time>
+          <h3>第一组人像在旧教学楼完成</h3>
+          <p>无补光,仅凭一扇朝西的窗,完成 36 张原片。这也是「窗边计划」的雏形,后来被反复重启。</p>
+        </li>
+        <li>
+          <time>2018 · 春</time>
+          <h3>官网正式上线,首批 60 支课程发布</h3>
+          <p>确立以长视频为主的呈现方式,每支内容必须有完整决策过程,拒绝只给结论的三分钟快剪。</p>
+        </li>
+        <li>
+          <time>2021 · 秋</time>
+          <h3>创作者扶持计划启动</h3>
+          <p>开放投稿入口与内容志愿者机制,四年累计帮助一千四百余位新人完成第一次正式发布。</p>
+        </li>
+        <li>
+          <time>2024 · 夏</time>
+          <h3>线下合作影棚网络扩展到 27 座城市</h3>
+          <p>统一白棚标准与安全规范,为社区用户提供可预约的练习场地与设备租借服务。</p>
+        </li>
+        <li>
+          <time>2026 · 冬</time>
+          <h3>第四季课程与 4K 原片下载同步上线</h3>
+          <p>客户端支持 4K 原片下载与封面模板库,课程体系完成从入门到进阶的贯通。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 作者矩阵：双列简介 -->
+  <section class="yb-section" id="yb-authors">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Creators 创作者</span>
+      <h2 class="yb-h2">创作者矩阵:镜头背后的人</h2>
+      <p class="yb-lead">印象足拍摄影班花社区目前签约与联合创作作者 86 位,以下为四位长期供稿的创作者。点击头像可查看简介与代表作品。</p>
+      <div class="yb-authors">
+        <article class="yb-author">
+          <span class="yb-avatar" style="background:linear-gradient(140deg,#c98448,#8a5324);">林</span>
+          <div>
+            <h3>林野枝</h3>
+            <div class="yb-role">自然光人像 · 课程主理</div>
+            <p>八年人像拍摄经验,擅长在极简条件下完成情绪肖像。「窗边计划」系列主理人,课程平均完播率 62%。相信光比器材更诚实。</p>
+            <div class="yb-author-stats"><span>作品 <b>128</b></span><span>粉丝 <b>21.4万</b></span></div>
+            <button class="yb-mini-btn yb-author-btn" type="button" data-name="林野枝" data-info="林野枝,自然光人像创作者。主张在教室、走廊、宿舍窗台等日常空间里完成拍摄训练,课程配套提供原片参数与练习作业,是印象足拍摄影班花官网访问量最高的创作者之一。">查看简介</button>
+            <button class="yb-mini-btn yb-follow-btn" type="button">+ 关注</button>
+          </div>
+        </article>
+        <article class="yb-author">
+          <span class="yb-avatar" style="background:linear-gradient(140deg,#3f6b8a,#24455c);">苏</span>
+          <div>
+            <h3>苏芷</h3>
+            <div class="yb-role">纪实摄影 · 访谈主持</div>
+            <p>关注镜头伦理与被摄者感受,主持「班花访谈录」专题。擅长把技术上不了台面的犹豫与沟通细节讲成可执行的方法,文字与影像双线创作。</p>
+            <div class="yb-author-stats"><span>作品 <b>74</b></span><span>粉丝 <b>13.8万</b></span></div>
+            <button class="yb-mini-btn yb-author-btn" type="button" data-name="苏芷" data-info="苏芷,纪实摄影方向创作者,长期主持「班花访谈录」。她坚持在每条影像中保留被摄者的完整表达,并推动品牌建立肖像授权与随时下架机制。">查看简介</button>
+            <button class="yb-mini-btn yb-follow-btn" type="button">+ 关注</button>
+          </div>
+        </article>
+        <article class="yb-author">
+          <span class="yb-avatar" style="background:linear-gradient(140deg,#5d7f56,#33502e);">陈</span>
+          <div>
+            <h3>老陈的定焦</h3>
+            <div class="yb-role">器材实操 · 极限练习</div>
+            <p>坚持一机一镜的教学思路,擅长在有限器材里做深度练习。毕业季速写系列作者,提供可下载的批量调色预设与取景路径示意图。</p>
+            <div class="yb-author-stats"><span>作品 <b>96</b></span><span>粉丝 <b>10.2万</b></span></div>
+            <button class="yb-mini-btn yb-author-btn" type="button" data-name="老陈的定焦" data-info="老陈的定焦,器材实操向创作者。以「一支镜头拍完一整个场景」为训练方法,强调身体记忆优先于器材升级,作品多附带完整参数与练习任务。">查看简介</button>
+            <button class="yb-mini-btn yb-follow-btn" type="button">+ 关注</button>
+          </div>
+        </article>
+        <article class="yb-author">
+          <span class="yb-avatar" style="background:linear-gradient(140deg,#7a5a8a,#452f52);">叶</span>
+          <div>
+            <h3>叶栖的白棚</h3>
+            <div class="yb-role">影棚布光 · 群像调度</div>
+            <p>线下影棚合作网络的技术负责人,擅长多人群像的站位与调度。现场录音完整保留的教学风格,让观众看见拍摄现场的混乱与秩序。</p>
+            <div class="yb-author-stats"><span>作品 <b>63</b></span><span>粉丝 <b>8.7万</b></span></div>
+            <button class="yb-mini-btn yb-author-btn" type="button" data-name="叶栖的白棚" data-info="叶栖的白棚,影棚布光与群像调度方向创作者。负责印象足拍摄影班花线下合作影棚的统一白棚标准,课程注重真实现场还原与安全规范。">查看简介</button>
+            <button class="yb-mini-btn yb-follow-btn" type="button">+ 关注</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评论与榜单 -->
+  <section class="yb-section yb-section-alt" id="yb-voices">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Voices 口碑评价</span>
+      <h2 class="yb-h2">社区口碑与数据榜单</h2>
+      <p class="yb-lead">以下评价来自印象足拍摄影班花社区的真实用户,语气与关注点各不相同,我们不做删改只做精选;榜单按近三十天数据统计。</p>
+
+      <div class="yb-comments" style="margin-bottom:38px;">
+        <article class="yb-comment">
+          <p>「作为摄影社的负责人,我把窗边计划前三集放给新成员看了一遍,散会后有三个人主动约了拍摄。它的好处是不炫技,给出的每一步都能在教室里复现。」</p>
+          <footer><b>周允</b><span>· 校园摄影社</span><span class="yb-stars">★★★★★</span></footer>
+        </article>
+        <article class="yb-comment">
+          <p>「被拍的那一期访谈看得有点鼻酸。我大学四年几乎不拍照,因为总觉得自己不上镜。原来不是不上镜,是没人跟我好好说过『你可以随时叫停』。」</p>
+          <footer><b>匿名用户</b><span>· 社区新成员</span><span class="yb-stars">★★★★★</span></footer>
+        </article>
+        <article class="yb-comment">
+          <p>四支 50mm 的测评对比做得非常克制,没有下绝对结论,而是给出不同场景下的取舍。唯一想吐槽的是字幕字号偏小,希望官网播放器再优化一下。</p>
+          <footer><b>阿泽的观众</b><span>· 器材向用户</span><span class="yb-stars">★★★★☆</span></footer>
+        </article>
+        <article class="yb-comment">
+          <p>「投稿到被官方精编大约用了两周,志愿者给了五条具体到焦段和后期步骤的修改建议,不是套话,这点很难得。」</p>
+          <footer><b>沈亦</b><span>· 已投稿创作者</span><span class="yb-stars">★★★★★</span></footer>
+        </article>
+        <article class="yb-comment">
+          <p>线下影棚预约流程顺,白棚标准统一,设备租借也便宜。就是周末档期太紧,建议提前更多天开放预约,或者增加晚场。</p>
+          <footer><b>程一舟</b><span>· 线下影棚用户</span><span class="yb-stars">★★★★☆</span></footer>
+        </article>
+        <article class="yb-comment">
+          <p>「4K 原片下载功能上线之后,我拿它做过肤色修图的对比练习,比看成品图学到的东西多得多。希望以后能开放更多历史课程的原片。」</p>
+          <footer><b>路遥</b><span>· 后期练习者</span><span class="yb-stars">★★★★★</span></footer>
+        </article>
+      </div>
+
+      <div class="yb-charts">
+        <div class="yb-chart">
+          <h3>近三十日热度榜</h3>
+          <ol>
+            <li><b>班花的光:窗边自然光实战</b><span>24.6万</span></li>
+            <li><b>镜头礼仪:拍同学前先学会的三句话</b><span>18.2万</span></li>
+            <li><b>毕业季速写:35mm 走完一间教室</b><span>15.7万</span></li>
+            <li><b>四支 50mm 的肤色还原对照</b><span>12.9万</span></li>
+            <li><b>36 人群像调度复盘</b><span>9.8万</span></li>
+            <li><b>阴天外拍临时改脚本</b><span>7.4万</span></li>
+          </ol>
+        </div>
+        <div class="yb-chart">
+          <h3>新人榜</h3>
+          <ol>
+            <li><b>沈亦</b><span>首作 3.2万播放</span></li>
+            <li><b>周允</b><span>入社区 41 天</span></li>
+            <li><b>路遥</b><span>修图练习 27 篇</span></li>
+            <li><b>程一舟</b><span>影棚探访 9 期</span></li>
+            <li><b>南枝</b><span>投稿 6 支·4 支精编</span></li>
+            <li><b>言午</b><span>评论区活跃值 92</span></li>
+          </ol>
+        </div>
+        <div class="yb-chart">
+          <h3>口碑榜</h3>
+          <ol>
+            <li><b>窗边计划 第四季</b><span>4.9 / 5</span></li>
+            <li><b>班花访谈录</b><span>4.9 / 5</span></li>
+            <li><b>一支定焦走完校园</b><span>4.8 / 5</span></li>
+            <li><b>幕后与失败合集</b><span>4.8 / 5</span></li>
+            <li><b>镜头礼仪小课</b><span>4.7 / 5</span></li>
+            <li><b>批量调色预设包</b><span>4.6 / 5</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 合作 -->
+  <section class="yb-section" id="yb-news">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Updates 企业动态</span>
+      <h2 class="yb-h2">企业动态与内容更新日志</h2>
+      <p class="yb-lead">印象足拍摄影班花官方发布的最新动向,包含课程上线、功能迭代与社区活动报名信息。</p>
+      <div class="yb-news">
+        <article>
+          <time>2026-11-20</time>
+          <div>
+            <h3>「窗边计划」第四季 12 讲正式上线</h3>
+            <p>本季新增室内低照度场景与肤色偏色修正两章,配套开放 4K 原片下载与练习作业提交入口。</p>
+          </div>
+        </article>
+        <article>
+          <time>2026-11-18</time>
+          <div>
+            <h3>创作者扶持计划开放报名,首批 40 个名额</h3>
+            <p>面向社区内首次投稿的创作者,提供一对一脚本评议、拍摄场地支持与官方精编推荐位。</p>
+          </div>
+        </article>
+        <article>
+          <time>2026-11-15</time>
+          <div>
+            <h3>客户端 4K 原片下载与封面模板库同步更新</h3>
+            <p>历史课程中原片开放范围扩大至 186 支,封面模板库新增 24 套品牌视觉规范模板。</p>
+          </div>
+        </article>
+        <article>
+          <time>2026-11-08</time>
+          <div>
+            <h3>线下合作影棚新增 3 座城市</h3>
+            <p>新增城市为合肥、昆明与泉州,统一执行白棚标准与安全规范,支持社区用户在线预约。</p>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="yb-h3" style="margin-top:40px;">合作品牌与伙伴</h3>
+      <div class="yb-partners">
+        <span class="yb-partner">拾光镜片</span>
+        <span class="yb-partner">南窗摄影器材</span>
+        <span class="yb-partner">白棚联合空间</span>
+        <span class="yb-partner">纸上印制工作室</span>
+        <span class="yb-partner">青苔影像基金</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + 投稿 -->
+  <section class="yb-section yb-section-alt" id="yb-faq">
+    <div class="yb-wrap">
+      <span class="yb-eyebrow">Help 帮助中心</span>
+      <h2 class="yb-h2">常见问题:关于课程、投稿与版权</h2>
+      <p class="yb-lead">以下是印象足拍摄影班花社区咨询频率较高的问题,若仍有疑问可通过下方投稿与联系板块留言。</p>
+      <div class="yb-faq">
+        <details open>
+          <summary>官网课程是免费的吗?是否需要注册?</summary>
+          <p>基础教程与专题影像免费公开,可直接观看;进阶课程与 4K 原片下载需要注册账号,部分内容需完成社区引导任务后解锁。注册不收取费用。</p>
+        </details>
+        <details>
+          <summary>投稿有什么具体要求?</summary>
+          <p>需要提交完整可播放的视频文件、拍摄参数说明与肖像授权凭证。我们更看重完整过程而非成片精修程度,素材不完整但过程真实的稿件同样欢迎。</p>
+        </details>
+        <details>
+          <summary>被拍摄者可以要求下架吗?</summary>
+          <p>可以。品牌允许被摄者在任何时间提出下架申请,经核实后内容会在 3 个工作日内下线,且不向创作者追责。这条规则优先于任何播放数据考量。</p>
+        </details>
+        <details>
+          <summary>课程中提供的预设与 LUT 可以商用吗?</summary>
+          <p>可用于个人与小型工作室的商业拍摄,但不得二次分发包售,也不得作为付费课程的核心素材转售。需要批量授权可联系官方邮箱。</p>
+        </details>
+        <details>
+          <summary>线下影棚预约如何取消?</summary>
+          <p>开始前 24 小时可免费取消,24 小时内取消会扣除一次预约额度。若因天气或设备故障由影棚方取消,则全额返还额度。</p>
+        </details>
+        <details>
+          <summary>如何参加创作者扶持计划?</summary>
+          <p>在投稿入口提交作品时勾选「参加扶持计划」即可进入初筛,内容志愿者会在两周内给出具体修改建议,通过后进入官方精编候选池。</p>
+        </details>
+        <details>
+          <summary>为什么我的稿件没有被官方精编?</summary>
+          <p>常见原因包括素材缺失关键决策过程、肖像授权不完整、音频不可用。评审意见会通过站内消息发送,可据此修改后重新提交。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿入口 -->
+  <section class="yb-section" id="yb-cta">
+    <div class="yb-wrap">
+      <div class="yb-cta">
+        <div>
+          <h2>把你的拍摄现场,交给印象足拍摄影班花</h2>
+          <p>无论是一次完整的课程练习,还是一段失败的拍摄记录,只要真实、有细节,都值得进入这个内容生态。官方每月精选 8 至 12 支投稿进行精编推荐。</p>
+          <ul class="yb-cta-info">
+            <li><span>投稿</span>support@yinxiang-shoot.example</li>
+            <li><span>合作</span>brand@yinxiang-shoot.example</li>
+            <li><span>时间</span>工作日 10:00 - 18:30</li>
+          </ul>
+          <div class="yb-cta-actions">
+            <button class="yb-btn yb-btn-amber yb-submit-btn" type="button">立即投稿</button>
+            <button class="yb-btn yb-btn-ghost yb-report-btn" type="button" style="color:#e9eff4;border-color:rgba(255,255,255,.3);">意见反馈</button>
+          </div>
+        </div>
+        <div class="yb-cta-box">
+          <h3>订阅官方内容更新</h3>
+          <p>每周一封,只包含新上线的精品内容与社区活动报名信息,不发送广告。</p>
+          <form id="yb-subscribe-form" onsubmit="return false;">
+            <label for="yb-subscribe-email" class="yb-hide">邮箱地址</label>
+            <input id="yb-subscribe-email" type="email" placeholder="填写你的邮箱" autocomplete="email">
+            <button class="yb-btn yb-btn-amber" type="submit" style="width:100%;">订阅更新</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="yb-footer">
+  <div class="yb-wrap">
+    <div class="yb-footer-grid">
+      <div>
+        <div class="yb-footer-brand">
+          <span class="yb-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"></circle>
+              <path d="M3 8.5h3.2L8 6h8l1.8 2.5H21"></path>
+              <path d="M3 8.5v9.5h18V8.5"></path>
+            </svg>
+          </span>
+          <strong>印象足拍摄影班花</strong>
+        </div>
+        <p style="margin:0 0 10px;">官方网站 · 版权所有 · 持续运营中</p>
+        <p style="margin:0;color:#7d93a3;">原创正版高清视频平台,深耕人像摄影垂直领域,以真实影像与专业课程陪伴每一位创作者成长。</p>
+      </div>
+      <div>
+        <h3>内容</h3>
+        <ul>
+          <li><a href="#yb-focus">精选影像</a></li>
+          <li><a href="#yb-topics">专题企划</a></li>
+          <li><a href="#yb-insight">品牌解析</a></li>
+          <li><a href="#yb-voices">口碑榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>社区</h3>
+        <ul>
+          <li><a href="#yb-authors">创作者矩阵</a></li>
+          <li><a href="#yb-cta">投稿入驻</a></li>
+          <li><a href="#yb-news">企业动态</a></li>
+          <li><a href="#yb-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关注</h3>
+        <ul>
+          <li><a href="#yb-cta">官方微信</a></li>
+          <li><a href="#yb-cta">视频号</a></li>
+          <li><a href="#yb-cta">小红书</a></li>
+          <li><a href="#yb-cta">B 站</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="yb-footer-bottom">
+      <span>© 2016 - 2026 印象足拍摄影班花 官方网站 版权所有</span>
+      <span>备案号:示例备案 2026-0118 号 · 持续运营中</span>
+    </div>
+  </div>
+</footer>
+
+<button class="yb-backtop" id="yb-backtop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+    <path d="M12 19V5M5 12l7-7 7 7"></path>
+  </svg>
+</button>
+
+<div class="yb-modal" id="yb-modal" role="dialog" aria-modal="true" aria-labelledby="yb-modal-title">
+  <div class="yb-modal-panel">
+    <h3 id="yb-modal-title">提示</h3>
+    <p id="yb-modal-desc"></p>
+    <div id="yb-modal-extra"></div>
+    <div class="yb-modal-actions">
+      <button class="yb-btn yb-btn-ghost" type="button" id="yb-modal-cancel">关闭</button>
+      <button class="yb-btn yb-btn-solid" type="button" id="yb-modal-ok">确定</button>
+    </div>
+  </div>
+</div>
+
+<div class="yb-toast" id="yb-toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var navToggle = document.getElementById('yb-nav-toggle');
+  var nav = document.getElementById('yb-nav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('yb-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && nav.classList.contains('yb-open')){
+        nav.classList.remove('yb-open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById('yb-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('yb-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('yb-show'); }, 2200);
+  }
+
+  /* ---------- 搜索提示 ---------- */
+  var searchForm = document.getElementById('yb-search-form');
+  var searchInput = document.getElementById('yb-search-input');
+  var searchFeedback = document.getElementById('yb-search-feedback');
+  var searchIndex = [
+    {t:'班花的光:窗边自然光实战 90 分钟全流程', k:'自然光 窗边 教程 林野枝'},
+    {t:'镜头礼仪:拍同学前先学会的三句话', k:'沟通 肖像授权 苏芷'},
+    {t:'毕业季速写:一支 35mm 定焦拍完整间教室', k:'定焦 毕业季 老陈'},
+    {t:'四支 50mm 人像头的肤色还原差异', k:'测评 镜头 肤色'},
+    {t:'36 人校服群像调度复盘', k:'群像 影棚 叶栖'},
+    {t:'窗边计划 第四季', k:'专题 自然光'},
+    {t:'班花访谈录', k:'专题 访谈 被摄者'},
+    {t:'创作者扶持计划报名', k:'投稿 报名 扶持'}
+  ];
+  if(searchForm && searchInput && searchFeedback){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      runSearch();
+    });
+    searchInput.addEventListener('input', function(){
+      if(searchInput.value.trim() === ''){
+        searchFeedback.textContent = '';
+        searchFeedback.classList.remove('yb-show');
+      }
+    });
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+    });
+  }
+  function runSearch(){
+    var q = (searchInput.value || '').trim().toLowerCase();
+    if(!q){
+      searchFeedback.textContent = '请输入关键词,例如「自然光」「定焦」「访谈」。';
+      searchFeedback.classList.add('yb-show');
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      return (item.t + ' ' + item.k).toLowerCase().indexOf(q) > -1;
+    });
+    if(hits.length){
+      searchFeedback.textContent = '找到 ' + hits.length + ' 条相关内容,例如:' + hits[0].t + '。可按「精选影像」进入查看。';
+      showToast('已匹配 ' + hits.length + ' 条内容');
+    }else{
+      searchFeedback.textContent = '暂未匹配到「' + q + '」相关内容,可尝试换用风景、光位或创作者名称。';
+      showToast('未找到匹配内容');
+    }
+    searchFeedback.classList.add('yb-show');
+  }
+
+  /* ---------- 点赞 ---------- */
+  document.querySelectorAll('.yb-like-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var b = btn.querySelector('b');
+      var base = parseInt(btn.getAttribute('data-count') || (b ? b.textContent : '0'), 10) || 0;
+      var liked = btn.classList.toggle('yb-active-like');
+      var next = liked ? base + 1 : base;
+      if(b) b.textContent = next;
+      btn.firstChild.nodeValue = liked ? '♥ 已赞 ' : '♡ 点赞 ';
+      showToast(liked ? '已加入点赞' : '已取消点赞');
+    });
+  });
+
+  /* ---------- 收藏 ---------- */
+  document.querySelectorAll('.yb-fav-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('yb-active-fav');
+      btn.textContent = on ? '★ 已收藏' : '☆ 收藏';
+      showToast(on ? '已收藏到个人片单' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll('.yb-copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-title') || '印象足拍摄影班花';
+      var link = 'https://example.com/#yb-focus';
+      var done = function(){ showToast('链接已复制,可粘贴分享'); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(done).catch(function(){ fallbackCopy(link, done); });
+      }else{
+        fallbackCopy(link, done);
+      }
+    });
+  });
+  function fallbackCopy(text, cb){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); cb(); }catch(e){ showToast('复制失败,请手动选择链接'); }
+    document.body.removeChild(ta);
+  }
+
+  /* ---------- 关注按钮 ---------- */
+  document.querySelectorAll('.yb-follow-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.getAttribute('data-follow') === '1';
+      btn.setAttribute('data-follow', on ? '0' : '1');
+      btn.textContent = on ? '+ 关注' : '✓ 已关注';
+      showToast(on ? '已取消关注' : '关注成功,可在创作者页查看更新');
+    });
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById('yb-modal');
+  var modalTitle = document.getElementById('yb-modal-title');
+  var modalDesc = document.getElementById('yb-modal-desc');
+  var modalExtra = document.getElementById('yb-modal-extra');
+  var modalOk = document.getElementById('yb-modal-ok');
+  var modalCancel = document.getElementById('yb-modal-cancel');
+  var modalResolve = null;
+
+  function openModal(opts){
+    if(!modal) return;
+    modalTitle.textContent = opts.title || '提示';
+    modalDesc.textContent = opts.desc || '';
+    modalExtra.innerHTML = opts.html || '';
+    modalOk.textContent = opts.okText || '确定';
+    modalCancel.textContent = opts.cancelText || '关闭';
+    modalResolve = opts.onOk || null;
+    modal.classList.add('yb-open');
+    if(opts.html){
+      var first = modalExtra.querySelector('input,textarea');
+      if(first) setTimeout(function(){ first.focus(); }, 60);
+    }
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.classList.remove('yb-open');
+    modalResolve = null;
+  }
+  if(modalOk){
+    modalOk.addEventListener('click', function(){
+      var fn = modalResolve;
+      if(fn){ var ok = fn(modalExtra); if(ok === false) return; }
+      closeModal();
+    });
+  }
+  if(modalCancel) modalCancel.addEventListener('click', closeModal);
+  if(modal){
+    modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('yb-open')) closeModal();
+    });
+  }
+
+  /* 作者简介弹窗 */
+  document.querySelectorAll('.yb-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal({
+        title: btn.getAttribute('data-name') || '创作者简介',
+        desc: btn.getAttribute('data-info') || '',
+        okText: '知道了',
+        cancelText: '关闭'
+      });
+    });
+  });
+
+  /* 投稿弹窗 */
+  document.querySelectorAll('.yb-submit-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal({
+        title: '投稿入驻',
+        desc: '留下邮箱与作品简述,内容志愿者会在两周内回复具体修改建议。',
+        html: '<label for="yb-sub-email" class="yb-hide">邮箱</label><input id="yb-sub-email" type="email" placeholder="你的邮箱"><label for="yb-sub-note" class="yb-hide">作品简述</label><textarea id="yb-sub-note" placeholder="作品简述:拍摄场景、使用器材、授权情况"></textarea>',
+        okText: '提交',
+        cancelText: '暂不投稿',
+        onOk: function(extra){
+          var email = extra.querySelector('#yb-sub-email');
+          var note = extra.querySelector('#yb-sub-note');
+          var val = email ? email.value.trim() : '';
+          if(!val || val.indexOf('@') < 1){
+            showToast('请填写有效邮箱');
+            return false;
+          }
+          if(note && !note.value.trim()){
+            showToast('请补充一段作品简述');
+            return false;
+          }
+          showToast('投稿已提交,请留意邮箱回复');
+          return true;
+        }
+      });
+    });
+  });
+
+  /* 意见反馈弹窗 */
+  document.querySelectorAll('.yb-report-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal({
+        title: '意见反馈',
+        desc: '描述你遇到的问题或建议,我们会逐条整理进入产品迭代清单。',
+        html: '<label for="yb-fb-text" class="yb-hide">反馈内容</label><textarea id="yb-fb-text" placeholder="例如:希望播放器字幕字号可调;或某条内容存在授权疑问"></textarea>',
+        okText: '提交反馈',
+        cancelText: '关闭',
+        onOk: function(extra){
+          var t = extra.querySelector('#yb-fb-text');
+          if(!t || !t.value.trim()){
+            showToast('请先填写反馈内容');
+            return false;
+          }
+          showToast('反馈已收到,感谢你的建议');
+          return true;
+        }
+      });
+    });
+  });
+
+  /* ---------- 订阅表单 ---------- */
+  var subForm = document.getElementById('yb-subscribe-form');
+  if(subForm){
+    subForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = document.getElementById('yb-subscribe-email');
+      var val = input ? input.value.trim() : '';
+      if(!val || val.indexOf('@') < 1){
+        showToast('请输入有效邮箱');
+        return;
+      }
+      if(input) input.value = '';
+      showToast('订阅成功,每周一封内容更新');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var backtop = document.getElementById('yb-backtop');
+  function onScroll(){
+    if(!backtop) return;
+    if(window.scrollY > 560){ backtop.classList.add('yb-show'); }
+    else{ backtop.classList.remove('yb-show'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  if(backtop){
+    backtop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
